@@ -19,7 +19,7 @@ vi /etc/docker/daemon.json
 
 # Install Kubernetes
 
-
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 
 
 
