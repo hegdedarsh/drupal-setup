@@ -1,5 +1,5 @@
 # Drupal-setup
-This is a installation guide for setting up drupal using Docker Image and deploying it using Kubernetes and monitoring the pods using ELK.
+This is a installation guide for setting up drupal using Docker Image and deploying it using Kubernetes and monitoring the logs using ELK.
 
 
 # Install Docker
@@ -75,6 +75,12 @@ watch kubectl get pods --all-namespaces
 Step 11:- Confirm that the master node is in ready status using the below command
 
 kubectl get nodes
+
+Step 12:- Setup worker nodes and join them to master, To do this, follow the Install Docker steps completely and follow the Install Kubernetes steps till Step 4.Follow these steps as many times depending on the number of worker nodes you need, which basically is a new VM.
+
+Step 13:- Join token
+
+
 
 
 
