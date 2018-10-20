@@ -26,6 +26,7 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 Step 2:- Add the kubernetes sources
 
 vi /etc/apt/sources.list.d/kubernetes.list
+
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 
 Step 3:- Do an update to grab the above sources
