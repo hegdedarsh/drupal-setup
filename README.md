@@ -41,7 +41,6 @@ Step 5:- Run kubeadm to get things started. Once you run the below command,you w
 
 kubeadm init --pod-network-cidr=192.168.0.0/16
 
-You will get the token to join the worker nodes, keep it somewhere safely
 
 
 Step 6:- Exit from the root user, and run the below commands as normal user
