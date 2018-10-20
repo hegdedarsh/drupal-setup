@@ -52,6 +52,30 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 
+Step 7:- Install an etcd instance with the following command.
+
+kubectl apply -f \
+https://docs.projectcalico.org/v3.2/getting-started/kubernetes/installation/hosted/etcd.yaml
+
+Step 8:- Install the RBAC roles required for Calico
+
+kubectl apply -f \
+https://docs.projectcalico.org/v3.2/getting-started/kubernetes/installation/rbac.yaml
+
+Step 9:- Install Calico with the following command.
+
+kubectl apply -f \
+https://docs.projectcalico.org/v3.2/getting-started/kubernetes/installation/hosted/calico.yaml
+
+
+Step 10:- Confirm that all of the pods are running with the following command.Note that this takes time, so please watch it for few minutes.
+
+watch kubectl get pods --all-namespaces
+
+Step 11:- Confirm that the master node is in ready status using the below command
+
+kubectl get nodes
+
 
 
 
