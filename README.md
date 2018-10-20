@@ -23,6 +23,22 @@ Step 1:- Add the key for the repo
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 
+Step 2:- Add the kubernetes sources
+
+vi /etc/apt/sources.list.d/kubernetes.list
+deb http://apt.kubernetes.io/ kubernetes-xenial main
+
+Step 3:- Do an update to grab the above sources
+
+apt update
+
+Step 4:- Install the 3 packages
+
+apt install -y kubelet kubeadm kubectl
+
+
+
+
 
 
 
