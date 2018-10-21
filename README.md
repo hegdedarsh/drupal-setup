@@ -3,6 +3,7 @@ This is a installation guide for setting up drupal using Docker Image and deploy
 
 
 # Install Docker
+For starters, try to do an apt-get update.
 
 Switch to root and run the below command
 
@@ -68,7 +69,7 @@ kubectl apply -f \
 https://docs.projectcalico.org/v3.2/getting-started/kubernetes/installation/hosted/calico.yaml
 
 
-Step 10:- Confirm that all of the pods are running with the following command.Note that this takes time, so please watch it for few minutes.
+Step 10:- Confirm that all of the pods are running with the following command.Note that this takes time, so please watch it for few minutes.Make sure you see all the pods as running, it takes a bit of time for the control plane to get ready
 
 watch kubectl get pods --all-namespaces
 
