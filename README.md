@@ -81,6 +81,14 @@ Step 12:- Setup worker nodes and join them to master, To do this, follow the Ins
 
 Step 13:- Join token
 
+In my case, this is what the token looked like, please use your own token which gets created when you run kubeadm.
+
+kubeadm join 172.31.25.97:6443 --token t0mt55.hg8ib424gow5kcj8 --discovery-token-ca-cert-hash sha256:7f5bb869a80f5731959702f0d72507f9e5ad27f2f12f2c0013e25edaa92109e3
+
+Step 14:- If you have lost the token and not able to find it, you can run the below command and get the token
+
+
+kubeadm token create --print-join-command
 
 
 
