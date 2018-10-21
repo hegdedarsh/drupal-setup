@@ -18,7 +18,7 @@ vi /etc/docker/daemon.json
         "exec-opts": ["native.cgroupdriver=systemd"]
 }
 
-Step 2:-Add the docker group if it doesn't already exist,Add the connected user "$USER" to the docker group. Change the user name to match your preferred user if you do not want to use your current use
+Step 2:-Add the docker group if it doesn't already exist,Add the connected user "$USER" to the docker group. Change the user name to match your preferred user if you do not want to use your current use.Once you do this, you can execute docker commands for non-root user without typing sudo
 
 
 sudo groupadd docker
