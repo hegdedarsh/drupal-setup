@@ -3,7 +3,7 @@ This is a installation guide for setting up drupal using Docker Image and deploy
 
 
 # Install Docker
-For starters, try to do an apt-get update.
+Step 1:-For starters, try to do an apt-get update.
 
 Switch to root and run the below command
 
@@ -17,6 +17,13 @@ vi /etc/docker/daemon.json
 {
         "exec-opts": ["native.cgroupdriver=systemd"]
 }
+
+Step 2:-Add the docker group if it doesn't already exist,Add the connected user "$USER" to the docker group. Change the user name to match your preferred user if you do not want to use your current use
+
+
+sudo groupadd docker
+
+sudo gpasswd -a $USER docker
 
 # Install Kubernetes
 
