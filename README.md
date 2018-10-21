@@ -39,7 +39,7 @@ apt install -y kubelet kubeadm kubectl
 
 Step 5:- Run kubeadm to get things started. Once you run the below command,you will get the token to join the worker nodes, keep it somewhere safely
 
-kubeadm init --pod-network-cidr=192.168.0.0/16
+kubeadm init –pod-network-cidr=10.244.0.0/16
 
 
 
