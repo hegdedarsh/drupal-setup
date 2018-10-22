@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Ubuntu Update"
 sleep 5s
@@ -49,11 +49,18 @@ echo "Extract drupal"
 wget https://ftp.drupal.org/files/projects/drupal-8.3.7.tar.gz
 echo "Extract done"
 
-echo "Extracting the zip file and placing it in /var/www/html/drupal"
+echo "Extracting the tar file and placing it in /var/www/html/drupal"
 mkdir /var/www/html/drupal
 chmod 777 -R /var/www/html/drupal/
 tar -pxvf drupal-8.3.7.tar.gz -C /var/www/html/drupal --strip-components=1
+
+
+echo " Copy the settings.php"
 cp /var/www/html/drupal/sites/default/default.settings.php /var/www/html/drupal/sites/default/settings.php
+
+echo " Create directory for drupal files and give permissions"
 mkdir /var/www/html/drupal/sites/default/files
 chmod 777 -R /var/www/html/drupal/
+
+echo " Drupal Setup is ready"
 
