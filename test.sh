@@ -54,13 +54,18 @@ mkdir /var/www/html/drupal
 chmod 777 -R /var/www/html/drupal/
 tar -pxvf drupal-8.3.7.tar.gz -C /var/www/html/drupal --strip-components=1
 
+sleep 5s
 
 echo " Copy the settings.php"
 cp /var/www/html/drupal/sites/default/default.settings.php /var/www/html/drupal/sites/default/settings.php
 
+
+sleep 2s
+
 echo " Create directory for drupal files and give permissions"
 mkdir /var/www/html/drupal/sites/default/files
 chmod 777 -R /var/www/html/drupal/
+sleep 5s
 
 echo " Drupal Setup is ready"
 
