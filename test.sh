@@ -43,3 +43,17 @@ echo "mysql-server-5.7 mysql-server/root_password_again password root" | sudo de
 apt-get -y install mysql-server-5.7
 apt-get -y install mysql-server-5.7
 echo "Install mysql-server done"
+
+
+echo "Extract drupal"
+wget https://ftp.drupal.org/files/projects/drupal-8.3.7.tar.gz
+echo "Extract done"
+
+echo "Extracting the zip file and placing it in /var/www/html/drupal"
+mkdir /var/www/html/drupal
+chmod 777 -R /var/www/html/drupal/
+tar -pxvf drupal-8.3.7.tar.gz -C /var/www/html/drupal --strip-components=1
+cp /var/www/html/drupal/sites/default/default.settings.php /var/www/html/drupal/sites/default/settings.php
+mkdir /var/www/html/drupal/sites/default/files
+chmod 777 -R /var/www/html/drupal/
+
