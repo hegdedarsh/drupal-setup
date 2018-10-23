@@ -159,4 +159,4 @@ Step 5:-Expose the deployment and create a service, you can also create a servic
 
 kubectl expose deployment deployment-name --type=NodePort --name=deployment-name-service
 
-Change the deployment name and deployment service 
+Change the deployment name and deployment service.Also the type could be NodePort or ClusterIP or Loadbalancer.
