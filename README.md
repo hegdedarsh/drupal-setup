@@ -319,4 +319,4 @@ nohup ./filebeat -e -c filebeat.yml &
 # References
 
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04 
-https://github.com/abhisgithub/Drupal-8-Installation-Script
+https://www.drupal.org/docs/8/install
