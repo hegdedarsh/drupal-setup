@@ -160,3 +160,30 @@ Step 5:-Expose the deployment and create a service, you can also create a servic
 kubectl expose deployment deployment-name --type=NodePort --name=deployment-name-service
 
 Change the deployment name and deployment service.Also the type could be NodePort or ClusterIP or Loadbalancer.
+
+
+# ELK
+
+
+Use ELK for log monitoring.
+
+
+
+Make sure you have java installed,if not use the below commands, by becoming root
+
+add-apt-repository -y ppa:webupd8team/java
+apt-get update -y
+apt-get -y install oracle-java8-installer
+java -version
+
+Step 1:- Elasticsearch
+We need to download elasticsearch zip file
+
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.4.2.zip
+
+unzip elasticsearch-6.4.2.zip
+
+cd elasticsearch-6.4.2/
+
+chmod 775 *
+
