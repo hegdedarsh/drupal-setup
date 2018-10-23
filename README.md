@@ -137,4 +137,26 @@ Password: password
 
 
 
+# Kubernetes-deployment
 
+Step 1:-To run it as a kubernetes deployment, use the below command
+
+kubectl create -f drupal-deployment.yaml -n app
+
+Step 2:- To check the deployment
+
+kubectl get deployments -n app
+
+Step 3:-To check the pods
+
+kubectl get pods -n app
+
+Step 4:- To expose the service
+
+
+Step 5:-Expose the deployment and create a service, you can also create a service using yaml file, but for now, i would prefer the below command
+
+
+kubectl expose deployment deployment-name --type=NodePort --name=deployment-name-service
+
+Change the deployment name and deployment service 
