@@ -97,6 +97,15 @@ Step 14:- If you have lost the token and not able to find it, you can run the be
 
 kubeadm token create --print-join-command
 
+Step 15: Go Back to master and execute the below command.You should see that the master and the worker are in ready status.
+
+kubectl get nodes
+
+#Dockerfile
+
+Step 1:- To build the docker image you need to create a Dockerfile.Make sure the Dockerfile and test.sh are in the same directory as test.sh will be used in the dockerfile for execution.
+
+Step 2:- Run the below command to build the docker image
 
 
 
