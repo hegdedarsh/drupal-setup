@@ -323,4 +323,4 @@ nohup ./filebeat -e -c filebeat.yml &
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04 
 https://www.drupal.org/docs/8/install
 
-For Kubernetes,Docker and ELK installation, its the official guide for these, but since i have worked on these , i know the setup beforehand and didnt really lookup for the docs online as those are complicated
+For Kubernetes,Docker and ELK installation, its the official guide for these, but since i have worked on it , i know the setup beforehand and didnt really lookup for the docs online as those are misleading
