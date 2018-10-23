@@ -124,11 +124,11 @@ One of the issues that i am facing, it takes time for the drupal page to show up
 
 First try to hit the below url to see whether the ubuntu apache page is loading
 
-http://<your-hostname>
+http://hostname
 
 Next, try the below page
 
-http://<your-hostname>/drupal
+http://hostname/drupal
 
 
 Database: drupal
