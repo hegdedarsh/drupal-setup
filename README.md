@@ -164,6 +164,7 @@ Change the deployment name and deployment service.Also the type could be NodePor
 
 # ELK
 
+# Elasticsearch
 
 Use ELK for log monitoring.
 
@@ -222,6 +223,8 @@ nohup ./elasticsearch &
 
 ps -ef| grep elasticsearch
 
+
+# Kibana
 
 
 
