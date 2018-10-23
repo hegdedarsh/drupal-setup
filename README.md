@@ -107,9 +107,20 @@ Step 1:- To build the docker image you need to create a Dockerfile.Make sure the
 
 Step 2:- Run the below command to build the docker image
 
+docker build -t drupal-test:v1 .
+
+Step 3:- Use the image to run the container
+
+docker run -it -p 80:80 --name drupal-test drupal-test:v1
+
+or 
+
+docker run -d -p 80:80 --name drupal-test drupal-test:v1
 
 
+Here if we use -it , then its interactive mode and you can check the whole process.If you use -d , then its background mode and you will only see the docker container id
 
+One of the issues that i am facing, it takes time for the drupal page to show up, so would request you to refresh the page and wait for 5-10 minutes
 
 
 
