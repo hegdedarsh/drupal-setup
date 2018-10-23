@@ -234,7 +234,9 @@ ps -ef| grep elasticsearch
 Download steps
  
 wget https://artifacts.elastic.co/downloads/kibana/kibana-6.4.2-linux-x86_64.tar.gz 
+
 tar -xzf kibana-6.4.2-linux-x86_64.tar.gz
+
 cd kibana-6.4.2-linux-x86_64/ 
 
 
