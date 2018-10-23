@@ -101,7 +101,7 @@ Step 15: Go Back to master and execute the below command.You should see that the
 
 kubectl get nodes
 
-#Dockerfile
+# Dockerfile
 
 Step 1:- To build the docker image you need to create a Dockerfile.Make sure the Dockerfile and test.sh are in the same directory as test.sh will be used in the dockerfile for execution.
 
