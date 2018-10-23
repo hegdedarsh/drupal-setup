@@ -4,6 +4,7 @@ echo "Ubuntu Update"
 sleep 5s
 
 apt-get update -y
+apt-get install wget dialog debconf sudo -y
 
 echo "Ubuntu Update done"
 
