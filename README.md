@@ -122,6 +122,16 @@ Here if we use -it , then its interactive mode and you can check the whole proce
 
 One of the issues that i am facing, it takes time for the drupal page to show up, so would request you to refresh the page and wait for 5-10 minutes
 
+First try to hit the below url to see whether the ubuntu apache page is loading
+http://<your-hostname>
+
+Next, try the below page
+http://<your-hostname>/drupal
+
+
+Database: drupal
+User: drupaluser
+Password: password
 
 
 
