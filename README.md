@@ -249,7 +249,9 @@ nohup ./kibana &
 # Logstash
 
 wget https://artifacts.elastic.co/downloads/logstash/logstash-6.4.2.zip
+
 unzip logstash-6.4.2.zip
+
 cd logstash-6.4.2
 
 Go to config and then logstash.conf
