@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: drupal-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: drupal
+    spec:
+      containers:
+      - name: drupal-app
+        image: drupal:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
