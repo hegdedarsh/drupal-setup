@@ -196,7 +196,7 @@ Step 2:- Go to config folder inside elasticsearch, and open elasticsearch.yml.Ad
 cluster.name: drupal-test
 node.name: master-node
 bootstrap.system_call_filter: false
-network.host: 172.31.28.78
+network.host: 10.199.11.48
 http.port: 920
 
 Step 3:-
@@ -226,5 +226,44 @@ ps -ef| grep elasticsearch
 
 # Kibana
 
+Download steps
+ 
+wget https://artifacts.elastic.co/downloads/kibana/kibana-6.4.2-linux-x86_64.tar.gz 
+tar -xzf kibana-6.4.2-linux-x86_64.tar.gz
+cd kibana-6.4.2-linux-x86_64/ 
+
+
+Go to kibana.yaml file and edit these changes
+
+server.port: 5601
+server.host: "10.199.11.48"
+server.name: "drupal-kibana"
+elasticsearch.url: "http://10.199.11.48:9200"       ## Provide the elasticsearch hostname
+pid.file: /opt/elk_test/kibana-6.4.0-linux-x86_64/config/kibana.pid
+
+
+Go to bin folder,
+
+nohup ./kibana &
+
+# Logstash
+
+wget https://artifacts.elastic.co/downloads/logstash/logstash-6.4.2.zip
+unzip logstash-6.4.2.zip
+cd logstash-6.4.2
+
+Go to config and then logstash.conf
+Change the following parameter
+
+hosts => ["http://10.199.11.48:9200"]
+
+Edit jvm.options file and change the heap size
+
+-Xms2g
+-Xmx2g
+
+Go to bin, and run the following command.
+
+nohup ./logstash -f ../bin/logstash.conf &
 
 
