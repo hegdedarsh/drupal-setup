@@ -194,15 +194,20 @@ chmod 775 *
 Step 2:- Go to config folder inside elasticsearch, and open elasticsearch.yml.Add the following or edit it in the file.Change the network.host based on your host ip.
 
 cluster.name: drupal-test
+
 node.name: master-node
+
 bootstrap.system_call_filter: false
+
 network.host: 10.199.11.48
+
 http.port: 920
 
 Step 3:-
 Go to the below path and open the file
 
 vi /etc/security/limits.conf
+
 Add the below value.In your case , the user might be different, just type whoami and check the user.
 
 user  -  nofile  262144
@@ -236,9 +241,13 @@ cd kibana-6.4.2-linux-x86_64/
 Go to kibana.yaml file and edit these changes
 
 server.port: 5601
+
 server.host: "10.199.11.48"
+
 server.name: "drupal-kibana"
+
 elasticsearch.url: "http://10.199.11.48:9200"       ## Provide the elasticsearch hostname
+
 pid.file: /opt/elk_test/kibana-6.4.0-linux-x86_64/config/kibana.pid
 
 
