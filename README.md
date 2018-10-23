@@ -176,6 +176,8 @@ apt-get update -y
 apt-get -y install oracle-java8-installer
 java -version
 
+
+
 Step 1:- Elasticsearch
 We need to download elasticsearch zip file
 
@@ -186,4 +188,40 @@ unzip elasticsearch-6.4.2.zip
 cd elasticsearch-6.4.2/
 
 chmod 775 *
+
+
+Step 2:- Go to config folder inside elasticsearch, and open elasticsearch.yml.Add the following or edit it in the file.Change the network.host based on your host ip.
+
+cluster.name: drupal-test
+node.name: master-node
+bootstrap.system_call_filter: false
+network.host: 172.31.28.78
+http.port: 920
+
+Step 3:-
+Go to the below path and open the file
+
+vi /etc/security/limits.conf
+Add the below value.In your case , the user might be different, just type whoami and check the user.
+
+user  -  nofile  262144
+
+Then do a reload
+
+systemctl daemon-reload
+
+
+Also edit the jvm.options
+
+-Xms2g
+-Xmx2g
+
+Step 4:- Go to bin folder and run the below command
+
+nohup ./elasticsearch &
+
+ps -ef| grep elasticsearch
+
+
+
 
