@@ -257,6 +257,8 @@ Go to bin folder,
 
 nohup ./kibana &
 
+Open the kibana console at http://hostname:5601
+
 # Logstash
 
 wget https://artifacts.elastic.co/downloads/logstash/logstash-6.4.2.zip
@@ -280,3 +282,35 @@ Go to bin, and run the following command.
 nohup ./logstash -f ../bin/logstash.conf &
 
 
+# Filebeat
+
+wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.4.2-linux-x86_64.tar.gz
+
+tar -xvf filebeat-6.4.2-linux-x86_64.tar.gz
+
+cd filebeat-6.4.2
+
+Step 1:- Open filebeat.yml and do the following changes.
+
+enabled: true
+
+paths:
+
+    - /admin/reports/dblog/*.log
+	
+setup.dashboards.enabled: true
+
+setup.kibana:
+
+  host: "10.199.11.48:5601
+  
+output.logstash:
+
+  hosts: ["10.199.11.48:5044"]
+  
+  
+Step 2:- Run the following command
+
+chmod 775 *
+
+nohup ./filebeat -e -c filebeat.yml &
