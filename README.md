@@ -130,7 +130,9 @@ http://<your-hostname>/drupal
 
 
 Database: drupal
+
 User: drupaluser
+
 Password: password
 
 
