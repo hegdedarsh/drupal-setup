@@ -324,3 +324,18 @@ https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mys
 https://www.drupal.org/docs/8/install
 
 For Kubernetes,Docker and ELK installation, its the official guide for these, but since i have worked on it , i know the setup beforehand and didnt really lookup for the docs online as those are misleading
+
+
+# Helm Install
+
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+kubectl --namespace kube-system create serviceaccount tiller
+
+kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+
+helm init --service-account tiller
+
+helm version
+
+https://zero-to-jupyterhub.readthedocs.io/en/stable/setup-helm.html 
